@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { GearModule } from './gear/gear.module';
+import { GearModule } from './gear/contract.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'database.sqlite',
+      type: 'sql',
+      database: 'database.sql',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),

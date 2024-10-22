@@ -51,13 +51,11 @@ export class GearService {
     const notificacion = this.notificationsRepository.create({
       user: { id: userId },
       message: mensaje,
-      isRead: false, 
+      isRead: false,
+     
     });
-
     return this.notificationsRepository.save(notificacion);
   }
-
-  
 
   async getNotificaciones(userId: number) {
     return this.notificationsRepository.find({ where: { user: { id: userId } } });

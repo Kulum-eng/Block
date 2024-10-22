@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
-import { GearService } from './gear.service';
+import { GearService } from './contract.service';
 
 @Controller('gear')
 export class GearController {
