@@ -14,11 +14,11 @@ export class GearController {
   // crear un contrato
   @Post('contrato')
   crearContrato(
-    @Body() body: { clienteId: number; freelancerId: number; monto: number },
+    @Body() body: { clienteId: number; EmpleoyeeId: number; monto: number },
   ) {
     return this.gearService.crearContrato(
       body.clienteId,
-      body.freelancerId,
+      body.EmpleoyeeId,
       body.monto,
     );
   }
@@ -31,7 +31,7 @@ export class GearController {
 
   // aprobar contrato por empleoyee
   @Post('contrato/:id/freelancer')
-  aprobarContratoPorFreelancer(@Param('id') id: number) {
+  aprobarContratoPorEmpleoyee(@Param('id') id: number) {
     return this.gearService.aprobarContratoPorEmpleoyee(id);
   }
 
