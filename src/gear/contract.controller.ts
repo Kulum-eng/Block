@@ -29,10 +29,10 @@ export class GearController {
     return this.gearService.aprobarContratoPorCliente(id);
   }
 
-  // aprobar contrato por freelancer
+  // aprobar contrato por empleoyee
   @Post('contrato/:id/freelancer')
   aprobarContratoPorFreelancer(@Param('id') id: number) {
-    return this.gearService.aprobarContratoPorFreelancer(id);
+    return this.gearService.aprobarContratoPorEmpleoyee(id);
   }
 
   // crear una notificación
